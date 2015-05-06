@@ -1,0 +1,60 @@
+// New to Stylus? Check out http://learnboost.github.io/stylus
+// Use modern CSS thanks to Autoprefixer: https://github.com/ai/autoprefixer
+
+// Import CSS from "node_modules" and "bower_components"
+// thanks to Stylus' "import css" and "paths" options
+
+@import 'prism/themes/prism-okaidia.css'
+@import 'fontawesome/css/font-awesome.css'
+// Check out "bower_components/prism/themes/" for available themes
+
+
+ixda_green = #55c4c4
+ixda_gary = #515e56
+ixda_light_gary = #deded0
+ixda_red = #ed1c24
+ixda_orange = #f26639
+ixda_bright_green = #a6ce39
+ixda_blue = #296098
+fanzytv_green = #67BF97
+fanzytv_blue = #4875B9
+
+a
+  color: ixda_green
+  text-decoration: none
+  &.black
+    color: black
+  .bespoke-slide.light &
+    color: rgba(0,0,0,0.7)
+  .bespoke-slide.light h1 &
+    color: ixda_green
+  &.ixda
+    color: ixda_gary
+    letter-spacing: 18px
+    margin-left: 12px
+
+.avatar
+  display: block
+  margin: 0 auto
+  width: 160px
+  height: 160px
+  border-radius: 120px
+  &--small
+    width: 100px
+    height: 100px
+
+.logo
+  width: 320px
+
+.fanzytv-background
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-image: url(../images/bg_image_large.jpg)
+
+.em4
+  font-size: 4em
+.em10
+  font-size: 10em
+.h-center
+  text-align: middle

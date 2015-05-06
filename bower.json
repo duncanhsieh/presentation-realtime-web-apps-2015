@@ -1,0 +1,8 @@
+{
+  "name": "presentation-realtime-web-apps-2015",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages",
+    "fontawesome": "*"
+  }
+}
