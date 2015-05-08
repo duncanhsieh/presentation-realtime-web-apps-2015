@@ -12,7 +12,7 @@ html
     article
 
       section
-        h1 Realtime Web Apps 2015
+        h1 Web 的即時互動怎麼玩？<br/>拿來做即時線上遊戲吧！
         h3
           a(href='https://fb.me/loveyou.tw', target="_blank") <i class="fa fa-facebook-official"></i> Duncan Hsieh
         img.avatar.avatar--small(src='images/profile.jpg')
@@ -20,20 +20,57 @@ html
       section
         img.logo(src='images/ixda_brandidentity.svg')
         h3
-          a.ixda(href='https://fb.me/ixda.tw') 台灣互動設計協會
+          a(href='https://fb.me/ixda.tw')
+            i.fa.fa-camera
+            span &nbsp; @ 台灣互動設計協會
 
       section.emphatic-text(data-bespoke-backdrop='emphatic', data-bespoke-state='fanzytv-blue')
         img.logo(src='images/logo.svg')
+        h3 資深<del> 經理 </del> 雜工
 
       section.fanzytv-background(data-bespoke-state='fanzytv-blue')
 
       section
-        h3.h-center
-          i.fa.fa-desktop.em10
+        h3.h-center.bullet
+          i.fa.fa-desktop.em6
           &nbsp;&nbsp;&nbsp;
-          i.fa.fa-arrows-h.em4
-          &nbsp;&nbsp;&nbsp;
-          i.fa.fa-mobile.em10
+          span.bullet
+            i.fa.fa-arrows-h.em4
+            span &nbsp;&nbsp;&nbsp;
+            strong
+              i.fa.fa-cloud.em6
+            span &nbsp;&nbsp;&nbsp;
+            i.fa.fa-arrows-h.em4
+            span &nbsp;&nbsp;&nbsp;
+          i.fa.fa-mobile.em6
+        h3
+          strong.bullet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;realtime
+
+      section
+        h2.hero 讓觀眾用 Web App <br/> 與電視內容 <strong>即時互動</strong>
+
+      section
+        h2 先來談談 <strong>聊天室</strong> 怎麼做?
+
+      section
+        h2.bullet 我第一次寫的聊天室大概長得像<a href="http://www.script-tutorials.com/demos/6/index.html" target="_blank">這樣子</a>
+        h2.bullet <del>阿，不小心暴露年紀</del>
+
+      section
+        pre.bullet
+          code.language-javascript.
+            &lt;head&gt; 
+              &lt;meta http-equiv="refresh" content="5"&gt; 
+            &lt;/head&gt; 
+        h2.bullet 其實這就是 http polling
+
+      section
+        h2 隨著技術的演竟
+        span.table.blue WebSockets
+        span.table.green Server-Sent Events
+        span.table.bright-green HTTP Streaming
+        span.table.orange HTTP Long-Polling
+        span.table.red HTTP Polling
 
       section
         h2 Touch Interaction
