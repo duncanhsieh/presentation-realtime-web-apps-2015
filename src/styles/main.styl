@@ -61,7 +61,7 @@ h2
   font-size: 2em
   text-align: center
   &.hero
-    font-size:2.5em
+    font-size:3em
 
 strong
   color: ixda_green
@@ -69,23 +69,38 @@ strong
 del
   color: ixda_gary
 
-span
-  &.table
-    color: #fff
-    width: 240px
-    height: 50px
-    line-height: 50px
-    margin:3px
-    background: #ccc
-    text-align: center
-    &.red
-      background-color: ixda_red
-    &.orange
-      background-color: ixda_orange
-    &.bright-green
-      background-color: ixda_bright_green
-    &.green
-      background-color: ixda_green
-    &.blue
-      background-color: ixda_blue
+.realtime-tech
+  span.column
+    margin: 0 10px
+    display: inline-block
+    vertical-align: middle
 
+  span.tech
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-flex-direction: column-reverse
+    -ms-flex-direction: column-reverse
+    flex-direction: column-reverse
+
+span.table
+  display: block
+  color: #fff
+  width: 240px
+  height: 50px
+  line-height: 50px
+  margin:3px
+  background: #ccc
+  text-align: center
+  &.red
+    background-color: ixda_red
+  &.orange
+    background-color: ixda_orange
+  &.bright-green
+    background-color: ixda_bright_green
+  &.green
+    background-color: ixda_green
+  &.blue
+    background-color: ixda_blue
+  &.purple
+    background-color: #400090

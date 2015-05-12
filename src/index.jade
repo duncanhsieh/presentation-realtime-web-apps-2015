@@ -20,9 +20,9 @@ html
       section
         img.logo(src='images/ixda_brandidentity.svg')
         h3
-          a(href='https://fb.me/ixda.tw')
+          a(href='https://fb.me/ixda.tw', target="_blank")
             i.fa.fa-camera
-            span &nbsp; @ 台灣互動設計協會
+            span &nbsp; 理事 @ 台灣互動設計協會
 
       section.emphatic-text(data-bespoke-backdrop='emphatic', data-bespoke-state='fanzytv-blue')
         img.logo(src='images/logo.svg')
@@ -32,7 +32,7 @@ html
 
       section
         h3.h-center.bullet
-          i.fa.fa-desktop.em6
+          i.fa.fa-desktop.em6.
           &nbsp;&nbsp;&nbsp;
           span.bullet
             i.fa.fa-arrows-h.em4
@@ -49,6 +49,16 @@ html
       section
         h2.hero 讓觀眾用 Web App <br/> 與電視內容 <strong>即時互動</strong>
 
+      section.realtime-tech
+        h2 Real-time 的主要應用
+        span
+          span.table.bullet.red 直播內容
+          span.table.bullet.orange 即時通知
+          span.table.bullet.bright-green 動態消息
+          span.table.bullet.green 聊天
+          span.table.bullet.blue 共同創作
+          span.table.bullet.purple 線上遊戲
+
       section
         h2 先來談談 <strong>聊天室</strong> 怎麼做?
 
@@ -62,16 +72,83 @@ html
             &lt;head&gt; 
               &lt;meta http-equiv="refresh" content="5"&gt; 
             &lt;/head&gt; 
-        h2.bullet 其實這就是 http polling
+        h2.bullet 用每 5 秒 reload 的方式做 Polling
 
       section
-        h2 隨著技術的演竟
-        span.table.blue WebSockets
-        span.table.green Server-Sent Events
-        span.table.bright-green HTTP Streaming
-        span.table.orange HTTP Long-Polling
-        span.table.red HTTP Polling
+        h2 想像一下當網站變大的時候會怎麼樣
+        ul
+          li 假設平均同時有 10,000 個使用者在線上
+          li 每 5 秒鐘重新整理一次網頁
+          li 1 小時就會有 <strong>7,200,000</strong> 次 request
+          li Server 就要 check session + Query DB 同樣次
 
+      section
+        h2.bullet.hero Real-time 的核心概念
+        h3.bullet 有一個可以持續不斷線的連線方式，就可以減少系統負擔
+
+      section.realtime-tech
+        h2.hero HACK Solution
+        span.table.orange HTTP Long-Polling
+        span.table.bright-green HTTP Streaming
+
+      section
+        h2 Server-Sent Events (EventSource API)
+        h3 基於 HTTP 的標準協定，不用再使用 Hack 的方法了
+  
+      section
+        h2 WebSocket protocol
+        h3 可以在 Browser 與 Server 之間，建立雙向、全雙工的持續連線
+
+      section
+        h2 很不幸的
+        ul
+          li 舊的瀏覽器可能不支援新的標準
+          li 防火牆(企業內網、學校內網)
+          li 3G/4G連線
+
+      section.realtime-tech
+        h2 Real-time Web Framework 的出現
+        div
+          span.column
+            h2 效能 <i class="fa-long-arrow-up fa"></i>
+          span.column 
+            span.tech
+              span.table.red HTTP Polling
+              span.table.orange HTTP Long-Polling
+              span.table.bright-green HTTP Streaming
+              span.table.green Server-Sent Events
+              span.table.blue WebSockets
+          span.column
+            h2 <i class="fa-long-arrow-down fa"></i> 相容
+
+      section
+        h2.hero 終於解決工程師心中的痛
+        h3 痛點解決了，接下來我們就可以談怎麼用
+
+      section
+        h2 Simple Messaging
+        ul
+          li 有點像 UDP 封包
+          li Real-time 技術中最基礎的功能
+          li 一對一單向資料傳輸
+          li 可以用來實作需要即時收到資料、通知的功能
+        
+      section
+        h2 Pub/Sub
+        ul
+          li 有點像廣播封包
+          li Real-time 技術中最常見的功能
+          li 訂閱特定 Channel( or Topic or Subject)
+          li 就可以過濾訊息，只收訂閱的訊息
+        
+      section
+        h2 Remote Method Innovation
+        ul
+          li 
+        
+      section
+        h2 Data Sync
+        
       section
         h2 Touch Interaction
         h3 Powered by <a href="https://github.com/markdalgleish/bespoke-touch">bespoke-touch</a>
