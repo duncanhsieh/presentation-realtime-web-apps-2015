@@ -8,6 +8,7 @@
   </head>
   <body>
     <article>
+      <section><img src="images/qrcode.svg" class="qrcode"></section>
       <section>
         <h1 class="hero">Web 的即時互動怎麼玩？<br/>拿來做即時線上遊戲吧！</h1>
         <h3><a href="https://fb.me/loveyou.tw" target="_blank"><i class="fa fa-facebook-official"></i> Duncan Hsieh</a></h3><img src="images/profile.jpg" class="avatar avatar--small">
@@ -34,6 +35,15 @@
       </section>
       <section>
         <h2 class="hero"><strong>即時(Real-time)</strong> 能玩什麼?</h2>
+      </section>
+      <section class="live-content">
+        <h2>實況遊戲</h2>
+        <video width="640">
+          <source src="images/ixda-live-wedding.mp4">
+        </video>
+      </section>
+      <section class="live-content">
+        <h2>實況遊戲</h2><img src="images/ixda-live-board.png">
       </section>
       <section class="live-content">
         <h2 class="bullet">即時通知</h2>
@@ -142,9 +152,12 @@
         </ul>
       </section>
       <section>
-        <h2>Simple Messaging</h2>
+        <h2 class="hero">開始一個線上遊戲專案</h2>
+      </section>
+      <section>
+        <h2><i class="fa  fa-envelope-o" ></i> 遊戲中的通知</h2>
         <ul>
-          <li>Real-time 技術中最基礎的功能</li>
+          <li>Real-time 技術中最基礎的功能 Simple Messaging</li>
           <li>一對一單向資料傳輸</li>
           <li>可以用來實作需要即時收到資料、通知的功能</li>
           <li>Cloud Service
@@ -161,9 +174,9 @@
         </ul>
       </section>
       <section>
-        <h2>Pub/Sub</h2>
+        <h2><i class="fa fa-weixin"></i> 聊天室</h2>
         <ul>
-          <li>Real-time 技術中最常見的功能</li>
+          <li>Real-time 技術中最常見的功能 Pub/Sub</li>
           <li>訂閱特定 Channel( or Topic or Subject)</li>
           <li>Cloud Service
             <ul>
@@ -181,22 +194,23 @@
         </ul>
       </section>
       <section>
-        <h2>Remote Method Invocation</h2>
+        <h2><i class="fa fa-gamepad"></i> 進入副本</h2>
         <ul>
           <li>Real-time 版的 API Call</li>
           <li>可以做更複雜的互動</li>
           <li>Self Hosted
             <ul>
               <li><a href="https://github.com/SignalR/SignalR" target="_blank">SignalR</a></li>
+              <li><a href="http://socket.io" target="_blank">socket.io</a></li>
             </ul>
           </li>
         </ul>
       </section>
       <section>
-        <h2>Data Sync</h2>
+        <h2><i class="fa fa-users"></i> 團隊競賽</h2>
         <ul>
+          <li>資料同步</li>
           <li>當資料改變時，就能收到資料變動的項目</li>
-          <li>常見的 google docs 和 hackpad 就是這樣的方式</li>
           <li>Cloud Service
             <ul>
               <li><a href="https://www.firebase.com/" target="_blank">Firebase</a></li>
@@ -213,21 +227,10 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h2>聽說網路有點慘</h2>
-      </section>
-      <section class="live-content">
-        <h2>實況遊戲</h2>
-        <video width="640">
-          <source src="images/ixda-live-wedding.mp4">
-        </video>
-      </section>
-      <section class="live-content">
-        <h2>實況遊戲</h2><img src="images/ixda-live-board.png">
-      </section>
       <section data-bespoke-backdrop="emphatic" data-bespoke-state="fanzytv-blue" class="emphatic-text"><img src="images/logo.svg" class="logo">
         <h2>We're Hiring!</h2>
       </section>
+      <section><img src="images/qrcode.svg" class="qrcode"></section>
     </article>
     <script src="build/build.js"></script>
   </body>
