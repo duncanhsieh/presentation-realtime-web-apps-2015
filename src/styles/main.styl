@@ -33,7 +33,7 @@ a
     letter-spacing: 18px
     margin-left: 12px
 
-.avatar
+img.avatar
   display: block
   margin: 0 auto
   width: 160px
@@ -52,10 +52,37 @@ a
   background-repeat: no-repeat
   background-image: url(../images/bg_image_large.jpg)
 
+.live-content
+  img
+    width: 100%
+
+div.notify
+  border: 1px solid #ccc
+  padding: 10px
+  position: absolute
+  left: 20px
+  bottom: 20px
+  a
+    color: #000
+  span.avatar
+    margin: 0 10px 0 0
+    display: inline-block
+    float:left
+    width: 50px
+    height: 50px
+    background-image: url(../images/fb-page.jpg)
+    background-size: cover
+  span.content
+    margin: 0 10px 0 0
+
 .em4
   font-size: 4em
 .em6
   font-size: 6em
+
+h1
+  &.hero
+    font-size:3em
 
 h2
   font-size: 2em
@@ -104,3 +131,6 @@ span.table
     background-color: ixda_blue
   &.purple
     background-color: #400090
+
+img.qrcode
+  height: 480px
