@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Realtime Web Apps 2015</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1 class="hero">Web 的即時互動怎麼玩？<br/>拿來做即時線上遊戲吧！</h1>
+        <h3><a href="https://fb.me/loveyou.tw" target="_blank"><i class="fa fa-facebook-official"></i> Duncan Hsieh</a></h3><img src="images/profile.jpg" class="avatar avatar--small">
+      </section>
+      <section><img src="images/ixda_brandidentity.svg" class="logo">
+        <h3><a href="https://fb.me/ixda.tw" target="_blank"><i class="fa fa-camera"></i><span>&nbsp; 理事 @ 台灣互動設計協會</span></a></h3>
+      </section>
+      <section data-bespoke-backdrop="emphatic" data-bespoke-state="fanzytv-blue" class="emphatic-text"><img src="images/logo.svg" class="logo">
+        <h3>資深<del> 經理 </del> 雜工</h3>
+      </section>
+      <section data-bespoke-state="fanzytv-blue" class="fanzytv-background"></section>
+      <section>
+        <h3 class="h-center bullet"><i class="fa fa-desktop em6"></i>&nbsp;&nbsp;&nbsp;<span class="bullet"><i class="fa fa-arrows-h em4"></i><span>&nbsp;&nbsp;&nbsp;</span><strong><i class="fa fa-cloud em6"></i></strong><span>&nbsp;&nbsp;&nbsp;</span><i class="fa fa-arrows-h em4"></i><span>&nbsp;&nbsp;&nbsp;</span></span><i class="fa fa-mobile em6"></i></h3>
+        <h3><strong class="bullet">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;realtime</strong></h3>
+      </section>
+      <section>
+        <h2 class="hero">讓觀眾用 Web App <br/> 與電視內容 <strong>即時互動</strong></h2>
+      </section>
+      <section>
+        <h2 class="hero"><strong>即時互動</strong> 聽起來很玄！<br/>對，老闆就想靠這招打天下！</h2>
+        <h3>
+          <del>創業哪有那麼簡單</del>
+        </h3>
+      </section>
+      <section>
+        <h2 class="hero"><strong>即時(Real-time)</strong> 能玩什麼?</h2>
+      </section>
+      <section class="live-content">
+        <h2 class="bullet">即時通知</h2>
+        <div class="notify bullet"><span class="avatar"></span><span class="content"><a target="_blank" href="https://www.facebook.com/HowCouldYouBeSoHandsome/photos/a.831210656962202.1073741825.831209396962328/831210743628860/?type=1&amp;theater">Duncan Hsieh 說你怎麼帥成這樣的照片很讚</a></span><i class="fa fa-times"></i></div>
+      </section>
+      <section class="live-content">
+        <h2 class="bullet">動態消息</h2><img src="images/active-feeds.png">
+      </section>
+      <section class="live-content">
+        <h2 class="bullet">共同創作</h2>
+        <script src="https://hackpad.com/g5G1KjVVb3n.js"></script>
+      </section>
+      <section class="live-content">
+        <h2 class="bullet">聊天</h2><img src="images/sauce.png">
+      </section>
+      <section>
+        <h2>先來談談 <strong>聊天室</strong> 怎麼做?</h2>
+      </section>
+      <section>
+        <h2 class="bullet">我第一次寫的聊天室大概長得像<a href="http://www.script-tutorials.com/demos/6/index.html" target="_blank">這樣子</a></h2>
+        <h2 class="bullet"><del>阿，不小心暴露年紀</del></h2>
+      </section>
+      <section>
+        <pre class="bullet"><code class="language-javascript">&lt;head&gt; 
+  &lt;meta http-equiv="refresh" content="5"&gt; 
+&lt;/head&gt; </code></pre>
+        <h2 class="bullet">用每 5 秒 reload 的方式做 Polling</h2>
+      </section>
+      <section>
+        <h2>想像一下當網站變大的時候會怎麼樣</h2>
+        <ul>
+          <li>假設平均同時有 10,000 個使用者在線上</li>
+          <li>每 5 秒鐘重新整理一次網頁</li>
+          <li>1 小時就會有 <strong>7,200,000</strong> 次 request</li>
+          <li>Server 就要 check session + Query DB 同樣次</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="bullet hero">Real-time 的核心概念</h2>
+        <h3 class="bullet">有一個可以持續不斷線的連線方式，就可以減少系統負擔</h3>
+      </section>
+      <section class="realtime-tech">
+        <h2 class="hero">HACK Solution</h2><span class="table red">HTTP Polling</span><span class="table orange">HTTP Long-Polling</span><span class="table bright-green">HTTP Streaming</span>
+      </section>
+      <section>
+        <h2 class="hero">HTTP Solution</h2><span class="table green">Server-Sent Events</span>
+        <h3>基於 HTTP 的標準協定，不用再使用 Hack 的方法了</h3>
+        <h3>可是 IE 永遠不支援</h3>
+      </section>
+      <section>
+        <h2 class="hero">Socket Solution</h2><span class="table blue">WebSockets</span>
+        <h3>可以在 Browser 與 Server 之間，建立雙向、全雙工的持續連線</h3>
+      </section>
+      <section>
+        <h2>很不幸的</h2>
+        <ul>
+          <li>舊的瀏覽器可能不支援新的標準</li>
+          <li>防火牆(企業內網、學校內網)</li>
+          <li>3G/4G連線</li>
+        </ul>
+      </section>
+      <section class="realtime-tech">
+        <h2>不同的技術有他的優缺點</h2>
+        <div><span class="column">
+            <h2>效能 <i class="fa-long-arrow-up fa"></i></h2></span><span class="column"><span class="tech"><span class="table red">HTTP Polling</span><span class="table orange">HTTP Long-Polling</span><span class="table bright-green">HTTP Streaming</span><span class="table green">Server-Sent Events</span><span class="table blue">WebSockets</span></span></span><span class="column">
+            <h2><i class="fa-long-arrow-down fa"></i> 相容</h2></span></div>
+      </section>
+      <section>
+        <h2>Real-time Framework 解決工程師心中的痛</h2>
+        <ul>
+          <li>Fallback 處理相容性</li>
+          <li>Scaling 最佳實務</li>
+          <li>開源社群持續維護</li>
+        </ul>
+      </section>
+      <section>
+        <h2>已經開始用 socket.io 請舉手</h2>
+      </section>
+      <section>
+        <h2 class="bullet">要做 Real-time Web 第一個想到的就是</h2>
+        <h2 class="hero bullet">socket.io ?</h2>
+        <h3 class="bullet">不一定，要評估功能來選擇適當的 framework</h3>
+      </section>
+      <section>
+        <h2 class="hero">如果你不想花太多時間處理</h2>
+        <ul>
+          <li>Scaling 和 Proformance</li>
+          <li>SLA 與 Fallback</li>
+          <li>Security 和 ACL</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="hero">使用現有的 Cloud Service</h2>
+        <ul>
+          <li>處理 Real-time 有很多眉眉角角，不要自幹</li>
+          <li>Google 或 stackoverflow 容易找到解決方法</li>
+          <li>等到免費的 quote 用完或達到經濟規模再自幹也不遲</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="hero">開始之前</h2>
+        <ul>
+          <li>支援你熟悉的語言</li>
+          <li>是否有 Native Mobile App 開發需求</li>
+          <li>資訊架構與資料互動的方式</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Simple Messaging</h2>
+        <ul>
+          <li>Real-time 技術中最基礎的功能</li>
+          <li>一對一單向資料傳輸</li>
+          <li>可以用來實作需要即時收到資料、通知的功能</li>
+          <li>Cloud Service
+            <ul>
+              <li><a href="https://www.hydna.com/" target="_blank">hydna</a></li>
+              <li><a href="https://superfeedr.com/" target="_blank">Superfeedr</a></li>
+            </ul>
+          </li>
+          <li>Self Hosted
+            <ul>
+              <li><a href="https://github.com/sockjs" target="_blank">SockJS</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Pub/Sub</h2>
+        <ul>
+          <li>Real-time 技術中最常見的功能</li>
+          <li>訂閱特定 Channel( or Topic or Subject)</li>
+          <li>Cloud Service
+            <ul>
+              <li><a href="https://www.pubnub.com/" target="_blank">PubNub</a></li>
+              <li><a href="https://pusher.com/" target="_blank">Pusher</a></li>
+              <li><a href="http://www.realtime.co/" target="_blank">Realtime.co</a></li>
+            </ul>
+          </li>
+          <li>Self Hosted
+            <ul>
+              <li><a href="http://faye.jcoglan.com/" target="_blank">Faye</a></li>
+              <li><a href="https://www.npmjs.com/package/socket.io-redis" target="_blank">Socket.io + redis</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Remote Method Invocation</h2>
+        <ul>
+          <li>Real-time 版的 API Call</li>
+          <li>可以做更複雜的互動</li>
+          <li>Self Hosted
+            <ul>
+              <li><a href="https://github.com/SignalR/SignalR" target="_blank">SignalR</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Data Sync</h2>
+        <ul>
+          <li>當資料改變時，就能收到資料變動的項目</li>
+          <li>常見的 google docs 和 hackpad 就是這樣的方式</li>
+          <li>Cloud Service
+            <ul>
+              <li><a href="https://www.firebase.com/" target="_blank">Firebase</a></li>
+              <li><a href="https://www.meteor.com/" target="_blank">METEOR</a></li>
+              <li><a href="http://www.realtime.co/" target="_blank">Realtime.co</a></li>
+              <li><a href="https://simperium.com/" target="_blank">simperium</a></li>
+            </ul>
+          </li>
+          <li>Self Hosted
+            <ul>
+              <li><a href="http://derbyjs.com/started" target="_blank">DERBY</a></li>
+              <li><a href="http://sailsjs.org/" target="_blank">Sails</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>聽說網路有點慘</h2>
+      </section>
+      <section class="live-content">
+        <h2>實況遊戲</h2>
+        <video width="640">
+          <source src="images/ixda-live-wedding.mp4">
+        </video>
+      </section>
+      <section class="live-content">
+        <h2>實況遊戲</h2><img src="images/ixda-live-board.png">
+      </section>
+      <section data-bespoke-backdrop="emphatic" data-bespoke-state="fanzytv-blue" class="emphatic-text"><img src="images/logo.svg" class="logo">
+        <h2>We're Hiring!</h2>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
